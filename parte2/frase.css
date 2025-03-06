@@ -1,0 +1,80 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: black;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+header, footer {
+    height: 50px;
+    background-color: rgb(56, 54, 54);
+}
+
+main {
+    background-color: #838282;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+
+#testoAlternato {
+    border: 2px solid black;
+    padding: 30px;
+    width: 700px;
+}
+
+.parole {
+    display: inline-block;
+    color: aqua;
+}
+
+#parola1 {
+    animation-name: falling;
+    animation-duration: 3s;
+}
+
+#parola2 {
+
+/*     z-index: 2; */
+}
+
+#parola3 {
+
+/*     z-index: 3; */
+}
+
+
+@keyframes falling {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
